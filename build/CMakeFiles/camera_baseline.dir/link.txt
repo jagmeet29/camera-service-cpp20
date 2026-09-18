@@ -1,1 +1,0 @@
-/usr/lib64/ccache/c++ -g -Wl,--dependency-file=CMakeFiles/camera_baseline.dir/link.d CMakeFiles/camera_baseline.dir/src/main.cpp.o -o camera_baseline  /usr/lib64/libopencv_videoio.so.4.13.0 /usr/lib64/libopencv_imgcodecs.so.4.13.0 /usr/lib64/libopencv_imgproc.so.4.13.0 /usr/lib64/libopencv_core.so.4.13.0

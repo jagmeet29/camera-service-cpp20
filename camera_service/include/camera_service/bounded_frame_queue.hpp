@@ -1,9 +1,9 @@
 #pragma once
 
-#include <condition_variable>
-#include <cstddef>
-#include <deque>
-#include <mutex>
+#include <condition_variable> // for effecient sleep and wakeup
+#include <cstddef> // for types like uint64_t or size_t
+#include <deque> // queue
+#include <mutex> // multiprocess safy locking
 
 #include "camera_service/frame.hpp"
 
@@ -19,6 +19,7 @@ public:
     bool wait_and_pop(Frame& output);
     void close();
     std::size_t size();
+    std::size_t take_high_water_mark();
 
 private:
     std::deque<Frame> frames_;
@@ -26,6 +27,8 @@ private:
     std::mutex mutex_;
     std::condition_variable not_empty_;
     bool closed_ = false;
+    std::size_t high_water_mark_ = 0;
+    
 };
 
 }  // namespace camera_service

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jagmeet/Documents/cpp/camera_service
+CMAKE_SOURCE_DIR = /home/jagmeet/Documents/cpp/new/camera_service
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/jagmeet/Documents/cpp/build
+CMAKE_BINARY_DIR = /home/jagmeet/Documents/cpp/new/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jagmeet/Documents/cpp/build/CMakeFiles /home/jagmeet/Documents/cpp/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jagmeet/Documents/cpp/new/build/CMakeFiles /home/jagmeet/Documents/cpp/new/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jagmeet/Documents/cpp/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jagmeet/Documents/cpp/new/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ src/bounded_frame_queue.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_view.dir/build.make CMakeFiles/camera_view.dir/src/bounded_frame_queue.cpp.s
 .PHONY : src/bounded_frame_queue.cpp.s
 
+src/capture.o: src/capture.cpp.o
+.PHONY : src/capture.o
+
+# target to build an object file
+src/capture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_view.dir/build.make CMakeFiles/camera_view.dir/src/capture.cpp.o
+.PHONY : src/capture.cpp.o
+
+src/capture.i: src/capture.cpp.i
+.PHONY : src/capture.i
+
+# target to preprocess a source file
+src/capture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_view.dir/build.make CMakeFiles/camera_view.dir/src/capture.cpp.i
+.PHONY : src/capture.cpp.i
+
+src/capture.s: src/capture.cpp.s
+.PHONY : src/capture.s
+
+# target to generate assembly for a file
+src/capture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/camera_view.dir/build.make CMakeFiles/camera_view.dir/src/capture.cpp.s
+.PHONY : src/capture.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... src/bounded_frame_queue.o"
 	@echo "... src/bounded_frame_queue.i"
 	@echo "... src/bounded_frame_queue.s"
+	@echo "... src/capture.o"
+	@echo "... src/capture.i"
+	@echo "... src/capture.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

@@ -6,7 +6,7 @@
 
 namespace camera_service {
 
-void processing_loop(BoundedFrameQueue& queue, PipelineMetrics& metrics) {
+void processing_loop(BoundedFrameQueue& queue, PipelineMetrics& metrics, ProcessorConfig config) {
     Frame frame;
     while (queue.wait_and_pop(frame)) {
         const auto processing_started = std::chrono::steady_clock::now();
@@ -25,7 +25,7 @@ void processing_loop(BoundedFrameQueue& queue, PipelineMetrics& metrics) {
         }
 
         // Intentional temporary overload used to exercise the queue policy.
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(config.processing_delay);
         ++metrics.processed_frames;
     }
 }

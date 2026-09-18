@@ -2,6 +2,7 @@
 
 #include <stdexcept>
 #include <utility>
+#include <algorithm>
 
 namespace camera_service {
 
@@ -24,6 +25,7 @@ bool BoundedFrameQueue::push(Frame frame) {
             not_dropped = false;
         }
         frames_.push_back(std::move(frame));
+        high_water_mark_ = std::max(high_water_mark_, frames_.size());
     }
     not_empty_.notify_one();
     return not_dropped;
@@ -55,4 +57,15 @@ std::size_t BoundedFrameQueue::size() {
     return frames_.size();
 }
 
+std::size_t BoundedFrameQueue::take_high_water_mark() {
+    std::lock_guard<std::mutex> lock(mutex_);
+
+    const std::size_t current_high_water = high_water_mark_;
+    high_water_mark_ = frames_.size();
+
+    return current_high_water;
+}
+
 }  // namespace camera_service
+
+

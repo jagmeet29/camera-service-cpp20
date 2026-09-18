@@ -11,6 +11,7 @@ add_executable(camera_view
     src/main.cpp
     src/bounded_frame_queue.cpp
     src/processor.cpp
+    src/capture.cpp
 )
 
 target_include_directories(camera_view PRIVATE include)

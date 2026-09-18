@@ -1,6 +1,7 @@
 #include "camera_service/bounded_frame_queue.hpp"
 #include "camera_service/pipeline_metrics.hpp"
 #include "camera_service/processor.hpp"
+#include "camera_service/capture.hpp"
 
 #include <chrono>
 #include <csignal>
@@ -8,6 +9,9 @@
 #include <iostream>
 #include <thread>
 #include <utility>
+#include <mutex>
+#include <string>
+#include <string_view>
 
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
@@ -23,110 +27,106 @@ void handle_signal(int) {
 
 }  // namespace
 
-int main() {
+int main(int argc, char* argv[]) {
+    camera_service::ProcessorConfig processor_config{};
+
+    if (argc == 3 && std::string_view(argv[1]) == "--processing-delay-ms") {
+        const int delay_ms = std::stoi(argv[2]);
+
+        if (delay_ms < 0) {
+            std::cerr<<"Delay must not be negative\n";
+            return 2;
+        }
+
+        processor_config.processing_delay = std::chrono::milliseconds(delay_ms);
+    } else if (argc != 1) {
+        std::cerr<<"useage:"
+            << argv[0]
+            << " [--processing-delay-ms NUMBER\n]";
+        return 2;
+    }
+
     using camera_service::BoundedFrameQueue;
     using camera_service::Frame;
     using camera_service::PipelineMetrics;
 
     BoundedFrameQueue queue(4);
     PipelineMetrics metrics;
-    std::uint64_t frame_number = 0;
-    std::uint64_t dropped_frames = 0;
-    std::uint64_t previous_processed_frames = 0;
-    std::uint64_t frames_in_interval = 0;
 
     std::signal(SIGINT, handle_signal);
 
-    cv::VideoCapture capture;
-    capture.open(0, cv::CAP_ANY);
-    if (!capture.isOpened()) {
-        std::cerr << "ERROR! Unable to open camera\n";
-        return 1;
-    }
 
-    std::thread processor([&queue, &metrics] {
-        camera_service::processing_loop(queue, metrics);
+    std::thread processor([&queue, &metrics, processor_config] {
+        camera_service::processing_loop(queue, metrics, processor_config);
+    });
+
+    camera_service::CaptureConfig capture_config{0};
+
+    std::thread capture_thread([&queue, &metrics, capture_config] {
+        camera_service::capture_loop(queue, metrics, stop_requested, capture_config);
     });
 
     std::cout << "Start grabbing\n"
-              << "Press q in the video window or Ctrl-C in the terminal to terminate\n";
+              << "Press Ctrl-C in the terminal to terminate\n";
+    
 
-    const auto service_started = std::chrono::steady_clock::now();
-    auto interval_started = service_started;
-    cv::Mat image;
+    auto interval_started = std::chrono::steady_clock::now();
+    std::uint64_t previous_processed_frame = 0;
+    std::uint64_t previous_captured_frame = 0;
 
-    while (!stop_requested) {
-        if (!capture.read(image) || image.empty()) {
-            std::cerr << "ERROR! blank frame grabbed\n";
-            break;
+    while (!stop_requested)
+    {
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+        auto now = std::chrono::steady_clock::now();
+        const double interval_seconds = std::chrono::duration<double>(now - interval_started).count();
+        if (interval_seconds < 1.0) {
+            continue;
+        }
+       
+        double frame_age_sum_ms = 0.0;
+        double frame_age_max_ms = 0.0;
+        std::uint64_t frame_age_samples = 0;
+
+        {
+            std::lock_guard<std::mutex> lock(metrics.age_mutex);
+        
+            frame_age_sum_ms = metrics.frame_age_sum_ms;
+            frame_age_max_ms = metrics.frame_age_max_ms;
+            frame_age_samples = metrics.frame_age_samples;
+        
+            metrics.frame_age_sum_ms = 0.0;
+            metrics.frame_age_max_ms = 0.0;
+            metrics.frame_age_samples = 0;
         }
 
-        const auto captured_at = std::chrono::steady_clock::now();
-        ++frame_number;
-        ++frames_in_interval;
+        const double frame_age_avg_ms = frame_age_samples == 0 ? 0.0 : frame_age_sum_ms / static_cast<double>(frame_age_samples);
+        const std::uint64_t processed_total = metrics.processed_frames.load();
+        const std::uint64_t processed_this_interval = processed_total - previous_processed_frame;
+        const std::uint64_t captured_total = metrics.captured_frames.load();
+        const std::uint64_t captured_this_interval = captured_total - previous_captured_frame;
+        const std::size_t queue_high_water = queue.take_high_water_mark();
 
-        Frame captured_frame{image.clone(), frame_number, captured_at};
-        if (!queue.push(std::move(captured_frame))) {
-            ++dropped_frames;
-        }
+        previous_processed_frame = processed_total;
+        previous_captured_frame = captured_total;
+        std::cout << "metrics capture_fps="
+                  << static_cast<double>(captured_this_interval) / interval_seconds
+                  << " processing_fps="
+                  << static_cast<double>(processed_this_interval) / interval_seconds
+                  << " dropped_frames=" << metrics.dropped_frames.load()
+                  << " queue_size=" << queue.size()
+                  << " frame_age_ms=" << metrics.last_frame_age_ms.load()
+                  << " frame_age_avg_ms=" << frame_age_avg_ms
+                  << " frame_age_max_ms=" << frame_age_max_ms
+                  << " queue_high_water=" << queue_high_water
+                  << " read_failures=" << metrics.read_failures.load()
+                  << '\n';
 
-        const auto now = std::chrono::steady_clock::now();
-        const double elapsed_seconds =
-            std::chrono::duration<double>(now - service_started).count();
-        const double interval_seconds =
-            std::chrono::duration<double>(now - interval_started).count();
+        interval_started = now;
 
-        if (interval_seconds >= 1.0) {
-            const std::uint64_t processed_total = metrics.processed_frames.load();
-            const std::uint64_t processed_this_interval =
-                processed_total - previous_processed_frames;
-            previous_processed_frames = processed_total;
-
-            double frame_age_sum_ms = 0.0;
-            double frame_age_max_ms = 0.0;
-            std::uint64_t frame_age_samples = 0;
-            {
-                std::lock_guard<std::mutex> lock(metrics.age_mutex);
-                frame_age_sum_ms = metrics.frame_age_sum_ms;
-                frame_age_max_ms = metrics.frame_age_max_ms;
-                frame_age_samples = metrics.frame_age_samples;
-                metrics.frame_age_sum_ms = 0.0;
-                metrics.frame_age_max_ms = 0.0;
-                metrics.frame_age_samples = 0;
-            }
-
-            const double frame_age_avg_ms = frame_age_samples == 0
-                ? 0.0
-                : frame_age_sum_ms / static_cast<double>(frame_age_samples);
-
-            std::cout << "metrics total_frames=" << frame_number
-                      << " capture_fps="
-                      << static_cast<double>(frames_in_interval) / interval_seconds
-                      << " dropped_frames=" << dropped_frames
-                      << " processing_fps="
-                      << static_cast<double>(processed_this_interval) / interval_seconds
-                      << " queue_size=" << queue.size()
-                      << " frame_age_ms=" << metrics.last_frame_age_ms.load()
-                      << " frame_age_avg_ms=" << frame_age_avg_ms
-                      << " frame_age_max_ms=" << frame_age_max_ms << '\n';
-
-            frames_in_interval = 0;
-            interval_started = now;
-        }
-
-        const double display_fps = elapsed_seconds == 0.0
-            ? 0.0
-            : static_cast<double>(frame_number) / elapsed_seconds;
-        cv::putText(image, "FPS: " + std::to_string(display_fps), cv::Point(50, 50),
-                    cv::FONT_HERSHEY_SIMPLEX, 1.0, cv::Scalar(0, 255, 0), 2);
-        cv::imshow("Live", image);
-
-        if (cv::waitKey(5) == 'q') {
-            stop_requested = 1;
-        }
     }
-
-    queue.close();
+    
+    capture_thread.join();
+    queue.close(); 
     processor.join();
     return 0;
 }

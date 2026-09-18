@@ -5,7 +5,7 @@ events:
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:12 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_UNAME"
     description: "Path to a program."
@@ -20,6 +20,8 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/lib64/ccache/"
@@ -29,6 +31,8 @@ events:
       - "/var/lib/snapd/snap/bin/"
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/uname"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/uname"
       - "/home/jagmeet/.local/bin/uname"
       - "/home/jagmeet/bin/uname"
       - "/usr/lib64/ccache/uname"
@@ -36,6 +40,8 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -47,18 +53,20 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:212 (message)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       The system is: Linux - 7.2.5-200.fc44.x86_64 - x86_64
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeUnixFindMake.cmake:5 (find_program)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_MAKE_PROGRAM"
     description: "Path to a program."
@@ -75,6 +83,8 @@ events:
       - "make"
       - "smake"
     candidate_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/lib64/ccache/"
@@ -84,6 +94,8 @@ events:
       - "/var/lib/snapd/snap/bin/"
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gmake"
       - "/home/jagmeet/.local/bin/gmake"
       - "/home/jagmeet/bin/gmake"
       - "/usr/lib64/ccache/gmake"
@@ -91,6 +103,8 @@ events:
     found: "/usr/bin/gmake"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -102,12 +116,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:69 (_cmake_find_compiler)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER"
     description: "CXX compiler"
@@ -131,6 +147,8 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/lib64/ccache/"
@@ -140,11 +158,15 @@ events:
       - "/var/lib/snapd/snap/bin/"
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/c++"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/c++"
       - "/home/jagmeet/.local/bin/c++"
       - "/home/jagmeet/bin/c++"
     found: "/usr/lib64/ccache/c++"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -152,6 +174,8 @@ events:
         - "/usr/bin"
         - "/bin"
         - "/var/lib/snapd/snap/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
@@ -164,7 +188,7 @@ events:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "file"
     variable: "src_in"
     description: "Path to a file."
@@ -183,6 +207,8 @@ events:
     found: "/usr/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -194,13 +220,15 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "message-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler: /usr/lib64/ccache/c++ 
@@ -214,14 +242,14 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /home/jagmeet/Documents/cpp/build/CMakeFiles/4.3.0/CompilerIdCXX/a.out
+        /home/jagmeet/Documents/cpp/new/build/CMakeFiles/4.3.0/CompilerIdCXX/a.out
       
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_AR"
     description: "Path to a program."
@@ -237,6 +265,8 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -246,12 +276,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/ar"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ar"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/ar"
       - "/home/jagmeet/.local/bin/ar"
       - "/home/jagmeet/bin/ar"
       - "/usr/local/bin/ar"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -263,12 +297,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_RANLIB"
     description: "Path to a program."
@@ -284,6 +320,8 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -293,12 +331,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/ranlib"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ranlib"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/ranlib"
       - "/home/jagmeet/.local/bin/ranlib"
       - "/home/jagmeet/bin/ranlib"
       - "/usr/local/bin/ranlib"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -310,12 +352,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_STRIP"
     description: "Path to a program."
@@ -331,6 +375,8 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -340,12 +386,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/strip"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/strip"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/strip"
       - "/home/jagmeet/.local/bin/strip"
       - "/home/jagmeet/bin/strip"
       - "/usr/local/bin/strip"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -357,12 +407,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_LINKER"
     description: "Path to a program."
@@ -378,6 +430,8 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -387,12 +441,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/ld"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/ld"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/ld"
       - "/home/jagmeet/.local/bin/ld"
       - "/home/jagmeet/bin/ld"
       - "/usr/local/bin/ld"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -404,12 +462,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_NM"
     description: "Path to a program."
@@ -425,6 +485,8 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -434,12 +496,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/nm"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/nm"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/nm"
       - "/home/jagmeet/.local/bin/nm"
       - "/home/jagmeet/bin/nm"
       - "/usr/local/bin/nm"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -451,12 +517,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJDUMP"
     description: "Path to a program."
@@ -472,6 +540,8 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -481,12 +551,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/objdump"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/objdump"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/objdump"
       - "/home/jagmeet/.local/bin/objdump"
       - "/home/jagmeet/bin/objdump"
       - "/usr/local/bin/objdump"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -498,12 +572,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_OBJCOPY"
     description: "Path to a program."
@@ -519,6 +595,8 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -528,12 +606,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/objcopy"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/objcopy"
       - "/home/jagmeet/.local/bin/objcopy"
       - "/home/jagmeet/bin/objcopy"
       - "/usr/local/bin/objcopy"
     found: "/usr/bin/objcopy"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -545,12 +627,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_READELF"
     description: "Path to a program."
@@ -566,6 +650,8 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -575,12 +661,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/readelf"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/readelf"
       - "/home/jagmeet/.local/bin/readelf"
       - "/home/jagmeet/bin/readelf"
       - "/usr/local/bin/readelf"
     found: "/usr/bin/readelf"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -592,12 +682,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_DLLTOOL"
     description: "Path to a program."
@@ -613,6 +705,8 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -622,6 +716,8 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/dlltool"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/dlltool"
       - "/home/jagmeet/.local/bin/dlltool"
       - "/home/jagmeet/bin/dlltool"
       - "/usr/local/bin/dlltool"
@@ -632,6 +728,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -643,12 +741,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_ADDR2LINE"
     description: "Path to a program."
@@ -664,6 +764,8 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -673,12 +775,16 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/addr2line"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/addr2line"
       - "/home/jagmeet/.local/bin/addr2line"
       - "/home/jagmeet/bin/addr2line"
       - "/usr/local/bin/addr2line"
     found: "/usr/bin/addr2line"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -690,12 +796,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_TAPI"
     description: "Path to a program."
@@ -711,6 +819,8 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -720,6 +830,8 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/tapi"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/tapi"
       - "/home/jagmeet/.local/bin/tapi"
       - "/home/jagmeet/bin/tapi"
       - "/usr/local/bin/tapi"
@@ -730,6 +842,8 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -741,12 +855,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_AR"
     description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
@@ -765,6 +881,8 @@ events:
       - "gcc-ar"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -774,6 +892,8 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/gcc-ar-16.2"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2"
       - "/home/jagmeet/.local/bin/gcc-ar-16.2"
       - "/home/jagmeet/bin/gcc-ar-16.2"
       - "/usr/local/bin/gcc-ar-16.2"
@@ -782,6 +902,8 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ar-16.2"
       - "/home/jagmeet/development/flutter/bin/gcc-ar-16.2"
       - "/usr/lib64/ccache/gcc-ar-16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16"
       - "/home/jagmeet/.local/bin/gcc-ar-16"
       - "/home/jagmeet/bin/gcc-ar-16"
       - "/usr/local/bin/gcc-ar-16"
@@ -790,6 +912,8 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ar-16"
       - "/home/jagmeet/development/flutter/bin/gcc-ar-16"
       - "/usr/lib64/ccache/gcc-ar16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16"
       - "/home/jagmeet/.local/bin/gcc-ar16"
       - "/home/jagmeet/bin/gcc-ar16"
       - "/usr/local/bin/gcc-ar16"
@@ -798,12 +922,16 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ar16"
       - "/home/jagmeet/development/flutter/bin/gcc-ar16"
       - "/usr/lib64/ccache/gcc-ar"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar"
       - "/home/jagmeet/.local/bin/gcc-ar"
       - "/home/jagmeet/bin/gcc-ar"
       - "/usr/local/bin/gcc-ar"
     found: "/usr/bin/gcc-ar"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -815,12 +943,14 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "find-v1"
     backtrace:
       - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
       - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     mode: "program"
     variable: "CMAKE_CXX_COMPILER_RANLIB"
     description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
@@ -839,6 +969,8 @@ events:
       - "gcc-ranlib"
     candidate_directories:
       - "/usr/lib64/ccache/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
       - "/home/jagmeet/.local/bin/"
       - "/home/jagmeet/bin/"
       - "/usr/local/bin/"
@@ -848,6 +980,8 @@ events:
       - "/home/jagmeet/development/flutter/bin/"
     searched_directories:
       - "/usr/lib64/ccache/gcc-ranlib-16.2"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2"
       - "/home/jagmeet/.local/bin/gcc-ranlib-16.2"
       - "/home/jagmeet/bin/gcc-ranlib-16.2"
       - "/usr/local/bin/gcc-ranlib-16.2"
@@ -856,6 +990,8 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ranlib-16.2"
       - "/home/jagmeet/development/flutter/bin/gcc-ranlib-16.2"
       - "/usr/lib64/ccache/gcc-ranlib-16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16"
       - "/home/jagmeet/.local/bin/gcc-ranlib-16"
       - "/home/jagmeet/bin/gcc-ranlib-16"
       - "/usr/local/bin/gcc-ranlib-16"
@@ -864,6 +1000,8 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ranlib-16"
       - "/home/jagmeet/development/flutter/bin/gcc-ranlib-16"
       - "/usr/lib64/ccache/gcc-ranlib16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16"
       - "/home/jagmeet/.local/bin/gcc-ranlib16"
       - "/home/jagmeet/bin/gcc-ranlib16"
       - "/usr/local/bin/gcc-ranlib16"
@@ -872,12 +1010,16 @@ events:
       - "/var/lib/snapd/snap/bin/gcc-ranlib16"
       - "/home/jagmeet/development/flutter/bin/gcc-ranlib16"
       - "/usr/lib64/ccache/gcc-ranlib"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib"
+      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib"
       - "/home/jagmeet/.local/bin/gcc-ranlib"
       - "/home/jagmeet/bin/gcc-ranlib"
       - "/usr/local/bin/gcc-ranlib"
     found: "/usr/bin/gcc-ranlib"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -889,17 +1031,19 @@ events:
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
   -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn"
-      binary: "/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn"
+      source: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn"
+      binary: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -910,13 +1054,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn'
+        Change Dir: '/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn'
         
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1fe1c/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_1fe1c.dir/build.make CMakeFiles/cmTC_1fe1c.dir/build
-        gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn'
-        Building CXX object CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_22b6e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_22b6e.dir/build.make CMakeFiles/cmTC_22b6e.dir/build
+        gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn'
+        Building CXX object CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
@@ -926,8 +1070,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib zstd
         gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1fe1c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -fdiagnostics-color=always -o /tmp/cc1d6Uqr.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_22b6e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccpEWeKk.s
         GNU C++20 (GCC) version 16.2.1 20260819 (Red Hat 16.2.1-2) (x86_64-redhat-linux)
         	compiled by GNU C version 16.2.1 20260819 (Red Hat 16.2.1-2), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.24-GMP
         
@@ -944,14 +1088,14 @@ events:
          /usr/include
         End of search list.
         Compiler executable checksum: 65ab9aa42e0ee60985a3e473fe6610c4
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/'
-         as -v --64 -o CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1d6Uqr.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/'
+         as -v --64 -o CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpEWeKk.s
         GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_1fe1c
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fe1c.dir/link.txt --verbose=1
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_22b6e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22b6e.dir/link.txt --verbose=1
         Using built-in specs.
         COLLECT_GCC=/usr/bin/c++
         COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper
@@ -964,14 +1108,14 @@ events:
         gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) 
         COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
         LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1fe1c' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_1fe1c.'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNvu4Du.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe1c /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22b6e' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_22b6e.'
+         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaKfFt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_22b6e /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         collect2 version 16.2.1 20260819 (Red Hat 16.2.1-2)
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNvu4Du.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe1c /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
+        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaKfFt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_22b6e /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
         GNU ld version 2.46.1-1.fc44
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1fe1c' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_1fe1c.'
-        /usr/lib64/ccache/c++  -v -Wl,-v CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_1fe1c
-        gmake[1]: Leaving directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22b6e' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_22b6e.'
+        /usr/lib64/ccache/c++  -v -Wl,-v CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_22b6e
+        gmake[1]: Leaving directory '/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn'
         
       exitCode: 0
   -
@@ -979,7 +1123,7 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
@@ -1005,18 +1149,18 @@ events:
     backtrace:
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn']
+        ignore line: [Change Dir: '/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1fe1c/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_1fe1c.dir/build.make CMakeFiles/cmTC_1fe1c.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-no8EGn']
-        ignore line: [Building CXX object CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_22b6e/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_22b6e.dir/build.make CMakeFiles/cmTC_22b6e.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/new/build/CMakeFiles/CMakeScratch/TryCompile-kaFSFn']
+        ignore line: [Building CXX object CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/lib64/ccache/c++   -v -o CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
@@ -1026,8 +1170,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib zstd]
         ignore line: [gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_1fe1c.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -fdiagnostics-color=always -o /tmp/cc1d6Uqr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1plus -quiet -v -D_GNU_SOURCE /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_22b6e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/ccpEWeKk.s]
         ignore line: [GNU C++20 (GCC) version 16.2.1 20260819 (Red Hat 16.2.1-2) (x86_64-redhat-linux)]
         ignore line: [	compiled by GNU C version 16.2.1 20260819 (Red Hat 16.2.1-2)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -1044,14 +1188,14 @@ events:
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 65ab9aa42e0ee60985a3e473fe6610c4]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc1d6Uqr.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccpEWeKk.s]
         ignore line: [GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-c' '-o' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_1fe1c]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1fe1c.dir/link.txt --verbose=1]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_22b6e]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22b6e.dir/link.txt --verbose=1]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/usr/bin/c++]
         ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper]
@@ -1064,13 +1208,13 @@ events:
         ignore line: [gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) ]
         ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
         ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_1fe1c' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_1fe1c.']
-        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNvu4Du.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe1c /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_22b6e' '-foffload-options=-l_GCC_stdc++' '-foffload-options=-l_GCC_m' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_22b6e.']
+        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaKfFt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_22b6e /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccNvu4Du.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccKaKfFt.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
           arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
@@ -1086,7 +1230,7 @@ events:
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_1fe1c] ==> ignore
+          arg [cmTC_22b6e] ==> ignore
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
@@ -1098,7 +1242,7 @@ events:
           arg [-L/lib] ==> dir [/lib]
           arg [-L/usr/lib] ==> dir [/usr/lib]
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -1110,7 +1254,7 @@ events:
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o]
           arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         ignore line: [collect2 version 16.2.1 20260819 (Red Hat 16.2.1-2)]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccNvu4Du.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_1fe1c /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_1fe1c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
+        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKaKfFt.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_22b6e /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_22b6e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -latomic_asneeded -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
         linker tool for 'CXX': /usr/bin/ld
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
         collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
@@ -1134,7 +1278,7 @@ events:
       - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
       - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
       - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:2 (project)"
+      - "CMakeLists.txt:3 (project)"
     message: |
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld version 2.46.1-1.fc44
@@ -1150,6 +1294,14 @@ events:
         found: true
       -
         name: "videoio"
+        required: true
+        found: true
+      -
+        name: "highgui"
+        required: true
+        found: true
+      -
+        name: "imgproc"
         required: true
         found: true
     configs:
@@ -1189,35 +1341,99 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/OpenCVConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/opencv-config.cmake"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/opencv-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/lib64/cps/OpenCV.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/lib64/cps/OpenCV.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/lib64/cps/opencv.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/lib64/cps/opencv.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/lib/cps/OpenCV.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/lib/cps/OpenCV.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/lib/cps/opencv.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/lib/cps/opencv.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/share/cps/OpenCV.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/share/cps/OpenCV.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "/home/jagmeet/Documents/cpp/build/CMakeFiles/pkgRedirects/share/cps/opencv.cps"
+        path: "/home/jagmeet/Documents/cpp/new/build/CMakeFiles/pkgRedirects/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/share/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/OpenCVConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/opencv-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib64/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/lib/cps/opencv.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/OpenCV.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/share/cps/opencv.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1386,6 +1602,8 @@ events:
       version: "4.13.0"
     search_context:
       ENV{PATH}:
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
+        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
         - "/home/jagmeet/.local/bin"
         - "/home/jagmeet/bin"
         - "/usr/lib64/ccache"
@@ -1393,6 +1611,8 @@ events:
         - "/usr/bin"
         - "/bin"
         - "/var/lib/snapd/snap/bin"
+        - "/home/jagmeet/development/flutter/bin"
+        - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
         - "/home/jagmeet/development/flutter/bin"
@@ -1407,557 +1627,4 @@ events:
         - "/usr/X11R6"
         - "/usr/pkg"
         - "/opt"
-...
-
----
-events:
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompiler.cmake:73 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:64 (_cmake_find_compiler)"
-      - "CMakeLists.txt"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER"
-    description: "C compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "cc"
-      - "gcc"
-      - "cl"
-      - "bcc"
-      - "xlc"
-      - "icx"
-      - "clang"
-    candidate_directories:
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/home/jagmeet/.local/bin/"
-      - "/home/jagmeet/bin/"
-      - "/usr/lib64/ccache/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/var/lib/snapd/snap/bin/"
-      - "/home/jagmeet/development/flutter/bin/"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
-    searched_directories:
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/cc"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/cc"
-      - "/home/jagmeet/.local/bin/cc"
-      - "/home/jagmeet/bin/cc"
-    found: "/usr/lib64/ccache/cc"
-    search_context:
-      ENV{PATH}:
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/home/jagmeet/.local/bin"
-        - "/home/jagmeet/bin"
-        - "/usr/lib64/ccache"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/var/lib/snapd/snap/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    mode: "file"
-    variable: "src_in"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "CMakeCCompilerId.c.in"
-    candidate_directories:
-      - "/usr/share/cmake/Modules/"
-    found: "/usr/share/cmake/Modules/CMakeCCompilerId.c.in"
-    search_context:
-      ENV{PATH}:
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/home/jagmeet/.local/bin"
-        - "/home/jagmeet/bin"
-        - "/usr/lib64/ccache"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/var/lib/snapd/snap/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt"
-    message: |
-      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /usr/lib64/ccache/cc 
-      Build flags: 
-      Id flags:  
-      
-      The output was:
-      0
-      
-      
-      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
-      
-      The C compiler identification is GNU, found in:
-        /home/jagmeet/Documents/cpp/build/CMakeFiles/4.3.0/CompilerIdC/a.out
-      
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_AR"
-    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ar-16.2"
-      - "gcc-ar-16"
-      - "gcc-ar16"
-      - "gcc-ar"
-    candidate_directories:
-      - "/usr/lib64/ccache/"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/home/jagmeet/.local/bin/"
-      - "/home/jagmeet/bin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/var/lib/snapd/snap/bin/"
-      - "/home/jagmeet/development/flutter/bin/"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
-    searched_directories:
-      - "/usr/lib64/ccache/gcc-ar-16.2"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16.2"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16.2"
-      - "/home/jagmeet/.local/bin/gcc-ar-16.2"
-      - "/home/jagmeet/bin/gcc-ar-16.2"
-      - "/usr/local/bin/gcc-ar-16.2"
-      - "/usr/bin/gcc-ar-16.2"
-      - "/bin/gcc-ar-16.2"
-      - "/var/lib/snapd/snap/bin/gcc-ar-16.2"
-      - "/home/jagmeet/development/flutter/bin/gcc-ar-16.2"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16.2"
-      - "/usr/lib64/ccache/gcc-ar-16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar-16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar-16"
-      - "/home/jagmeet/.local/bin/gcc-ar-16"
-      - "/home/jagmeet/bin/gcc-ar-16"
-      - "/usr/local/bin/gcc-ar-16"
-      - "/usr/bin/gcc-ar-16"
-      - "/bin/gcc-ar-16"
-      - "/var/lib/snapd/snap/bin/gcc-ar-16"
-      - "/home/jagmeet/development/flutter/bin/gcc-ar-16"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar-16"
-      - "/usr/lib64/ccache/gcc-ar16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar16"
-      - "/home/jagmeet/.local/bin/gcc-ar16"
-      - "/home/jagmeet/bin/gcc-ar16"
-      - "/usr/local/bin/gcc-ar16"
-      - "/usr/bin/gcc-ar16"
-      - "/bin/gcc-ar16"
-      - "/var/lib/snapd/snap/bin/gcc-ar16"
-      - "/home/jagmeet/development/flutter/bin/gcc-ar16"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ar16"
-      - "/usr/lib64/ccache/gcc-ar"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ar"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ar"
-      - "/home/jagmeet/.local/bin/gcc-ar"
-      - "/home/jagmeet/bin/gcc-ar"
-      - "/usr/local/bin/gcc-ar"
-    found: "/usr/bin/gcc-ar"
-    search_context:
-      ENV{PATH}:
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/home/jagmeet/.local/bin"
-        - "/home/jagmeet/bin"
-        - "/usr/lib64/ccache"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/var/lib/snapd/snap/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
-      - "CMakeLists.txt"
-    mode: "program"
-    variable: "CMAKE_C_COMPILER_RANLIB"
-    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "gcc-ranlib-16.2"
-      - "gcc-ranlib-16"
-      - "gcc-ranlib16"
-      - "gcc-ranlib"
-    candidate_directories:
-      - "/usr/lib64/ccache/"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/"
-      - "/home/jagmeet/.local/bin/"
-      - "/home/jagmeet/bin/"
-      - "/usr/local/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/var/lib/snapd/snap/bin/"
-      - "/home/jagmeet/development/flutter/bin/"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/"
-    searched_directories:
-      - "/usr/lib64/ccache/gcc-ranlib-16.2"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16.2"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16.2"
-      - "/home/jagmeet/.local/bin/gcc-ranlib-16.2"
-      - "/home/jagmeet/bin/gcc-ranlib-16.2"
-      - "/usr/local/bin/gcc-ranlib-16.2"
-      - "/usr/bin/gcc-ranlib-16.2"
-      - "/bin/gcc-ranlib-16.2"
-      - "/var/lib/snapd/snap/bin/gcc-ranlib-16.2"
-      - "/home/jagmeet/development/flutter/bin/gcc-ranlib-16.2"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16.2"
-      - "/usr/lib64/ccache/gcc-ranlib-16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib-16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib-16"
-      - "/home/jagmeet/.local/bin/gcc-ranlib-16"
-      - "/home/jagmeet/bin/gcc-ranlib-16"
-      - "/usr/local/bin/gcc-ranlib-16"
-      - "/usr/bin/gcc-ranlib-16"
-      - "/bin/gcc-ranlib-16"
-      - "/var/lib/snapd/snap/bin/gcc-ranlib-16"
-      - "/home/jagmeet/development/flutter/bin/gcc-ranlib-16"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib-16"
-      - "/usr/lib64/ccache/gcc-ranlib16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib16"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib16"
-      - "/home/jagmeet/.local/bin/gcc-ranlib16"
-      - "/home/jagmeet/bin/gcc-ranlib16"
-      - "/usr/local/bin/gcc-ranlib16"
-      - "/usr/bin/gcc-ranlib16"
-      - "/bin/gcc-ranlib16"
-      - "/var/lib/snapd/snap/bin/gcc-ranlib16"
-      - "/home/jagmeet/development/flutter/bin/gcc-ranlib16"
-      - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts/gcc-ranlib16"
-      - "/usr/lib64/ccache/gcc-ranlib"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand/gcc-ranlib"
-      - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli/gcc-ranlib"
-      - "/home/jagmeet/.local/bin/gcc-ranlib"
-      - "/home/jagmeet/bin/gcc-ranlib"
-      - "/usr/local/bin/gcc-ranlib"
-    found: "/usr/bin/gcc-ranlib"
-    search_context:
-      ENV{PATH}:
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/debugCommand"
-        - "/home/jagmeet/.config/Code/User/globalStorage/github.copilot-chat/copilotCli"
-        - "/home/jagmeet/.local/bin"
-        - "/home/jagmeet/bin"
-        - "/usr/lib64/ccache"
-        - "/usr/local/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/var/lib/snapd/snap/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/.vscode/extensions/ms-python.debugpy-2026.6.0-linux-x64/bundled/scripts/noConfigScripts"
-        - "/home/jagmeet/development/flutter/bin"
-        - "/home/jagmeet/development/flutter/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    checks:
-      - "Detecting C compiler ABI info"
-    directories:
-      source: "/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME"
-      binary: "/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME"
-    cmakeVariables:
-      CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_C_FLAGS: ""
-      CMAKE_EXE_LINKER_FLAGS: ""
-    buildResult:
-      variable: "CMAKE_C_ABI_COMPILED"
-      cached: true
-      stdout: |
-        Change Dir: '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME'
-        
-        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7fd3d/fast
-        /usr/bin/gmake  -f CMakeFiles/cmTC_7fd3d.dir/build.make CMakeFiles/cmTC_7fd3d.dir/build
-        gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME'
-        Building C object CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o
-        /usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/cc
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-redhat-linux
-        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,m2,cobol,algol68,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.2.1-build/gcc-16.2.1-20260819/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none,amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp
-        Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7fd3d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cchDmAaJ.s
-        GNU C23 (GCC) version 16.2.1 20260819 (Red Hat 16.2.1-2) (x86_64-redhat-linux)
-        	compiled by GNU C version 16.2.1 20260819 (Red Hat 16.2.1-2), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.4.1, isl version isl-0.24-GMP
-        
-        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/include-fixed"
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         /usr/lib/gcc/x86_64-redhat-linux/16/include
-         /usr/local/include
-         /usr/include
-        End of search list.
-        Compiler executable checksum: 9bab69ee039b57e5d63c6dcf5d331ec2
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/'
-         as -v --64 -o CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o /tmp/cchDmAaJ.s
-        GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44
-        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_7fd3d
-        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fd3d.dir/link.txt --verbose=1
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/cc
-        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-redhat-linux
-        Configured with: ../configure --enable-bootstrap --enable-languages=c,c++,fortran,objc,obj-c++,ada,go,d,m2,cobol,algol68,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.2.1-build/gcc-16.2.1-20260819/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none,amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp
-        Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) 
-        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7fd3d' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_7fd3d.'
-         /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTeYmC0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7fd3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
-        collect2 version 16.2.1 20260819 (Red Hat 16.2.1-2)
-        /usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTeYmC0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7fd3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o
-        GNU ld version 2.46.1-1.fc44
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7fd3d' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_7fd3d.'
-        /usr/lib64/ccache/cc  -v -Wl,-v CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -o cmTC_7fd3d
-        gmake[1]: Leaving directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME'
-        
-      exitCode: 0
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Parsed C implicit include dir info: rv=done
-        found start of include info
-        found start of implicit include info
-          add: [/usr/lib/gcc/x86_64-redhat-linux/16/include]
-          add: [/usr/local/include]
-          add: [/usr/include]
-        end of search list found
-        collapse include dir [/usr/lib/gcc/x86_64-redhat-linux/16/include] ==> [/usr/lib/gcc/x86_64-redhat-linux/16/include]
-        collapse include dir [/usr/local/include] ==> [/usr/local/include]
-        collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/lib/gcc/x86_64-redhat-linux/16/include;/usr/local/include;/usr/include]
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Parsed C implicit link information:
-        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME']
-        ignore line: []
-        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7fd3d/fast]
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_7fd3d.dir/build.make CMakeFiles/cmTC_7fd3d.dir/build]
-        ignore line: [gmake[1]: Entering directory '/home/jagmeet/Documents/cpp/build/CMakeFiles/CMakeScratch/TryCompile-xTgeME']
-        ignore line: [Building C object CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/lib64/ccache/cc   -v -o CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/cc]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-redhat-linux]
-        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran objc obj-c++ ada go d m2 cobol algol68 lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.2.1-build/gcc-16.2.1-20260819/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/']
-        ignore line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/cc1 -quiet -v /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7fd3d.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -mtls-dialect=gnu2 -version -o /tmp/cchDmAaJ.s]
-        ignore line: [GNU C23 (GCC) version 16.2.1 20260819 (Red Hat 16.2.1-2) (x86_64-redhat-linux)]
-        ignore line: [	compiled by GNU C version 16.2.1 20260819 (Red Hat 16.2.1-2)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.4.1  isl version isl-0.24-GMP]
-        ignore line: []
-        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/include-fixed"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/16/../../../../x86_64-redhat-linux/include"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/lib/gcc/x86_64-redhat-linux/16/include]
-        ignore line: [ /usr/local/include]
-        ignore line: [ /usr/include]
-        ignore line: [End of search list.]
-        ignore line: [Compiler executable checksum: 9bab69ee039b57e5d63c6dcf5d331ec2]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o /tmp/cchDmAaJ.s]
-        ignore line: [GNU assembler version 2.46.1 (x86_64-redhat-linux) using BFD version version 2.46.1-1.fc44]
-        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_7fd3d]
-        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fd3d.dir/link.txt --verbose=1]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/cc]
-        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-redhat-linux]
-        ignore line: [Configured with: ../configure --enable-bootstrap --enable-languages=c c++ fortran objc obj-c++ ada go d m2 cobol algol68 lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=https://bugzilla.redhat.com/ --enable-shared --enable-threads=posix --enable-checking=release --enable-multilib --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-libstdcxx-backtrace --with-libstdcxx-zoneinfo=/usr/share/zoneinfo --with-linker-hash-style=gnu --enable-plugin --enable-initfini-array --with-isl=/builddir/build/BUILD/gcc-16.2.1-build/gcc-16.2.1-20260819/obj-x86_64-redhat-linux/isl-install --enable-offload-targets=nvptx-none amdgcn-amdhsa --enable-offload-defaulted --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-tls=gnu2 --with-arch_32=i686 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1 --disable-libssp]
-        ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 16.2.1 20260819 (Red Hat 16.2.1-2) (GCC) ]
-        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/16/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/16/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/16/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7fd3d' '-mtune=generic' '-march=x86-64' '-mtls-dialect=gnu2' '-dumpdir' 'cmTC_7fd3d.']
-        link line: [ /usr/libexec/gcc/x86_64-redhat-linux/16/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTeYmC0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7fd3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
-          arg [/usr/libexec/gcc/x86_64-redhat-linux/16/collect2] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [/usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so] ==> ignore
-          arg [-plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccTeYmC0.res] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
-          arg [-plugin-opt=-pass-through=-latomic_asneeded] ==> ignore
-          arg [-plugin-opt=-pass-through=-lc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s_asneeded] ==> ignore
-          arg [--build-id] ==> ignore
-          arg [--no-add-needed] ==> ignore
-          arg [--eh-frame-hdr] ==> ignore
-          arg [--hash-style=gnu] ==> ignore
-          arg [-m] ==> ignore
-          arg [elf_x86_64] ==> ignore
-          arg [-dynamic-linker] ==> ignore
-          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-          arg [-o] ==> ignore
-          arg [cmTC_7fd3d] ==> ignore
-          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o]
-          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o]
-          arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o]
-          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16]
-          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64]
-          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
-          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
-          arg [-L/usr/lib/gcc/x86_64-redhat-linux/16/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../..]
-          arg [-L/lib] ==> dir [/lib]
-          arg [-L/usr/lib] ==> dir [/usr/lib]
-          arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o] ==> ignore
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
-          arg [-latomic_asneeded] ==> lib [atomic_asneeded]
-          arg [-lc] ==> lib [c]
-          arg [-lgcc] ==> lib [gcc]
-          arg [-lgcc_s_asneeded] ==> lib [gcc_s_asneeded]
-          arg [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o]
-          arg [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
-        ignore line: [collect2 version 16.2.1 20260819 (Red Hat 16.2.1-2)]
-        ignore line: [/usr/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/16/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/16/lto-wrapper -plugin-opt=-fresolution=/tmp/ccTeYmC0.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded -plugin-opt=-pass-through=-latomic_asneeded -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s_asneeded --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7fd3d /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/16 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/16/../../.. -L/lib -L/usr/lib -v CMakeFiles/cmTC_7fd3d.dir/CMakeCCompilerABI.c.o -lgcc -lgcc_s_asneeded -latomic_asneeded -lc -lgcc -lgcc_s_asneeded /usr/lib/gcc/x86_64-redhat-linux/16/crtend.o /usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o]
-        linker tool for 'C': /usr/bin/ld
-        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crt1.o] ==> [/usr/lib64/crt1.o]
-        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crti.o] ==> [/usr/lib64/crti.o]
-        collapse obj [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64/crtn.o] ==> [/usr/lib64/crtn.o]
-        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16] ==> [/usr/lib/gcc/x86_64-redhat-linux/16]
-        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../../../lib64] ==> [/usr/lib64]
-        collapse library dir [/lib/../lib64] ==> [/lib64]
-        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
-        collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/16/../../..] ==> [/usr/lib]
-        collapse library dir [/lib] ==> [/lib]
-        collapse library dir [/usr/lib] ==> [/usr/lib]
-        implicit libs: [gcc;gcc_s_asneeded;atomic_asneeded;c;gcc;gcc_s_asneeded]
-        implicit objs: [/usr/lib64/crt1.o;/usr/lib64/crti.o;/usr/lib/gcc/x86_64-redhat-linux/16/crtbegin.o;/usr/lib/gcc/x86_64-redhat-linux/16/crtend.o;/usr/lib64/crtn.o]
-        implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/16;/usr/lib64;/lib64;/usr/lib;/lib]
-        implicit fwks: []
-      
-      
-  -
-    kind: "message-v1"
-    backtrace:
-      - "/usr/share/cmake/Modules/Internal/CMakeDetermineLinkerId.cmake:38 (message)"
-      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:299 (cmake_determine_linker_id)"
-      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt"
-    message: |
-      Running the C compiler's linker: "/usr/bin/ld" "-v"
-      GNU ld version 2.46.1-1.fc44
 ...

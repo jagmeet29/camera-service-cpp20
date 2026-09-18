@@ -1,7 +1,7 @@
 #pragma once
 
-#include <chrono>
-#include <cstdint>
+#include <chrono> // for time
+#include <cstdint> // for type (uint64_t)
 
 #include <opencv2/core.hpp>
 

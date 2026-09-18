@@ -1,0 +1,3 @@
+/home/jagmeet/Documents/cpp/new/build-camera/CMakeFiles/camera_view.dir
+/home/jagmeet/Documents/cpp/new/build-camera/CMakeFiles/edit_cache.dir
+/home/jagmeet/Documents/cpp/new/build-camera/CMakeFiles/rebuild_cache.dir

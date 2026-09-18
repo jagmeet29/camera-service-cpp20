@@ -5,6 +5,10 @@
 
 namespace camera_service {
 
-void processing_loop(BoundedFrameQueue& queue, PipelineMetrics& metrics);
+struct ProcessorConfig {
+    std::chrono::milliseconds processing_delay{100};
+};
+
+void processing_loop(BoundedFrameQueue& queue, PipelineMetrics& metrics, ProcessorConfig config);
 
 }  // namespace camera_service
