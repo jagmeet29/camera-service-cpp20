@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/jagmeet/Documents/cpp/build",
+  "command": "/usr/lib64/ccache/c++  -I/home/jagmeet/Documents/cpp/camera_service/include -isystem /usr/include/opencv4 -g -std=gnu++20 -o CMakeFiles/camera_view.dir/src/main.cpp.o -c /home/jagmeet/Documents/cpp/camera_service/src/main.cpp",
+  "file": "/home/jagmeet/Documents/cpp/camera_service/src/main.cpp",
+  "output": "CMakeFiles/camera_view.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/jagmeet/Documents/cpp/build",
+  "command": "/usr/lib64/ccache/c++  -I/home/jagmeet/Documents/cpp/camera_service/include -isystem /usr/include/opencv4 -g -std=gnu++20 -o CMakeFiles/camera_view.dir/src/bounded_frame_queue.cpp.o -c /home/jagmeet/Documents/cpp/camera_service/src/bounded_frame_queue.cpp",
+  "file": "/home/jagmeet/Documents/cpp/camera_service/src/bounded_frame_queue.cpp",
+  "output": "CMakeFiles/camera_view.dir/src/bounded_frame_queue.cpp.o"
+},
+{
+  "directory": "/home/jagmeet/Documents/cpp/build",
+  "command": "/usr/lib64/ccache/c++  -I/home/jagmeet/Documents/cpp/camera_service/include -isystem /usr/include/opencv4 -g -std=gnu++20 -o CMakeFiles/camera_view.dir/src/processor.cpp.o -c /home/jagmeet/Documents/cpp/camera_service/src/processor.cpp",
+  "file": "/home/jagmeet/Documents/cpp/camera_service/src/processor.cpp",
+  "output": "CMakeFiles/camera_view.dir/src/processor.cpp.o"
+}
+]

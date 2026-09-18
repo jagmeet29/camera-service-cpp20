@@ -1,0 +1,16 @@
+#pragma once
+
+#include <chrono>
+#include <cstdint>
+
+#include <opencv2/core.hpp>
+
+namespace camera_service {
+
+struct Frame {
+    cv::Mat image;
+    std::uint64_t sequence_number;
+    std::chrono::steady_clock::time_point captured_at;
+};
+
+}  // namespace camera_service
