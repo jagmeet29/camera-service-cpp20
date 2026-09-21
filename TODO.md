@@ -4,25 +4,41 @@ Goal: build a Linux C++ camera component that delivers fresh frames, remains bou
 
 ## Progress estimate
 
-- **Overall completion:** approximately **35%**.
-- **Remaining focused implementation time:** approximately **21–37 hours**.
-- **At 4–6 hours per week:** approximately **5–8 weeks**.
+- **Last reviewed:** 2026-09-19, against the current source and reported test output.
+- **Overall completion:** approximately **65%**; **35% remaining**.
+- **Remaining focused implementation and learning time:** approximately **14–24 hours**.
+- **At 4–6 hours per week:** approximately **3–6 weeks**.
 
-The largest remaining pieces are restoring threaded metrics reporting, camera
-disconnect/reconnect recovery, sanitizer/debug verification, and documented
-experiments. The estimate includes learning and debugging time, not only typing
-code.
+This is an effort estimate, not a percentage of checked boxes. The bounded
+pipeline, interval metrics, configurable delay, and initial README are working.
+Basic phone-stream recovery and lock-free atomic shutdown signaling are now
+implemented. Remaining work includes blocking-I/O timeouts, input validation,
+recovery measurements, failure tests, and reproducible measurements. Driver behavior and
+debugging may change the estimate.
+
+## Immediate next task
+
+- [x] Replace the shared stop flag with `std::atomic<bool>` and verify at compile
+  time that it is always lock-free; keep the signal handler limited to setting it.
+- [ ] Select FFmpeg explicitly for the phone URL and pass open/read timeouts when
+  opening the stream. Test stream loss, reconnect, and Ctrl-C during stalled I/O;
+  measure actual shutdown time rather than assuming the timeout is a hard bound.
+- [ ] Validate delay arguments fully: reject text, trailing characters, negative
+  numbers, and out-of-range values with a useful error instead of an uncaught exception.
 
 ## GitHub checkpoints
 
-- [ ] **Checkpoint 1 — first push:** Restore the main-thread reporter loop; build successfully; run the producer/consumer overload test; commit the working two-thread pipeline and this TODO.
-- [ ] **Checkpoint 2 — shareable progress:** Make processing delay configurable; add queue high-water/read-failure metrics; publish measured overload results in `README.md`.
+- [x] **Checkpoint 1 — first-push code milestone:** Reporter restored, producer/consumer overload test demonstrated, and local commit `3af6dc4` exists. Remote points to `jagmeet29/linux-camera-service-cpp20`; remote publication was not checked during this review.
+- [x] **Checkpoint 2 — shareable progress:** Processing delay is configurable; queue high-water/read-failure metrics and initial overload results are documented in `README.md`.
 - [ ] **Checkpoint 3 — portfolio-ready public repository:** Demonstrate disconnect/reconnect recovery, clean shutdown in all states, sanitizer/GDB verification, architecture diagram, and a short demo video.
 
-It is safe to push to a private GitHub repository at Checkpoint 1. Link the
-repository publicly on a resume only after Checkpoint 3.
+The project can be shared now as work in progress. Checkpoint 3 is the target
+for demonstrating recovery and reliability in a portfolio.
 
 ## Milestone 1 — sequential capture baseline
+
+These are historical baseline achievements. The current service is headless;
+GUI display and the `q` exit were removed when capture moved to its own thread.
 
 - [x] Open webcam index `0` with OpenCV.
 - [x] Reject an unavailable camera with a useful error.
@@ -63,30 +79,51 @@ repository publicly on a resume only after Checkpoint 3.
 - [x] Report average and maximum frame age for each interval.
 - [x] Verify zero-delay behavior: ~30 FPS capture/processing, zero drops, empty queue, and sub-millisecond frame age.
 - [ ] Run overload experiments with several processing delays and queue capacities.
-- [ ] Publish the actual commands, results, and interpretation in `README.md`.
+- [x] Publish initial 0 ms and 100 ms delay results and run commands in `README.md`.
+- [ ] Save raw logs, camera/backend/resolution details, and results for the expanded experiment set.
 
 ## Milestone 4 — camera failure and recovery
 
-- [ ] Introduce explicit service states: `Starting`, `Streaming`, `Disconnected`, `Stopping`, `Stopped`.
-- [ ] On failed read, release the capture device and transition to `Disconnected`.
-- [ ] Retry opening the camera using a bounded backoff delay.
-- [ ] On successful reopening, return to `Streaming`.
+- [x] Introduce explicit service states: `Starting`, `Streaming`, `Disconnected`, `Stopping`, `Stopped`.
+- [x] On failed read, release the capture device and transition to `Disconnected`.
+- [x] Retry opening after a fixed one-second delay, checking the stop flag every 50 ms during that delay.
+- [ ] Add capped backoff for repeated failures (currently the retry delay is fixed).
+- [x] After reopening and receiving a valid frame, return to `Streaming`.
+- [x] Demonstrate phone IP-camera stream loss and recovery without restarting the service.
 - [ ] Count reconnect attempts and successful reconnects.
-- [ ] Measure and report recovery time after a physical disconnect/reconnect test.
+- [ ] Measure and report recovery time for the phone-stream restart test; distinguish failure detection time from recovery after the source becomes available.
+- [ ] Separate open failures from read failures (currently both increment `read_failures`).
+
+Reported phone test: `Streaming -> Disconnected -> Streaming`, followed by a
+second disconnection and Ctrl-C reaching `Stopping -> Stopped`. This verifies
+basic network-stream recovery, not USB hotplug behavior or a shutdown deadline.
+No timed recovery measurement has been recorded yet.
 
 ## Milestone 5 — shutdown and verification
 
 - [x] Make Ctrl-C request shutdown without doing cleanup inside the signal handler.
 - [x] Wake blocked consumers during shutdown.
 - [x] Join the processing thread before `main` returns.
+- [x] Join the capture thread before closing the queue.
+- [x] Use atomic loads/stores for the shared stop flag; require lock-free operations for signal-handler use.
+- [ ] Handle worker exceptions without terminating the process with joinable threads.
+- [ ] Measure shutdown time and document camera read/open blocking limitations.
 - [ ] Verify shutdown during capture, during slow processing, and while disconnected.
+- [x] Observe Ctrl-C shutdown while disconnected in the reported phone test.
 - [ ] Build and run with AddressSanitizer and UndefinedBehaviorSanitizer.
+- [ ] Check thread synchronization with ThreadSanitizer where supported.
 - [ ] Debug at least one real issue with GDB or sanitizer output; document the cause and fix.
 
 ## Portfolio delivery
 
-- [ ] Add build and run instructions, dependencies, and camera permissions to `README.md`.
-- [ ] Add an architecture diagram showing capture, bounded queue, processor, metrics, and recovery.
+- [x] Add build/run instructions and dependencies to `README.md`.
+- [ ] Document camera permission troubleshooting.
+- [x] Add a Mermaid diagram showing capture, queue, processor, and metrics.
+- [ ] Extend the architecture documentation when recovery is implemented.
+- [ ] Update README for the phone URL, recovery behavior, and current limitations.
+  Explain that frame age starts after OpenCV returns a frame, not at the phone's
+  exposure time; the last age value remains stale when no new frames arrive.
 - [ ] Add a short demo video: normal operation, overload, disconnect/reconnect, clean shutdown.
-- [ ] Add a results table with measured throughput, drops, frame age, memory behavior, and recovery time.
+- [x] Add initial throughput, drop, queue, and frame-age results.
+- [ ] Add measured memory behavior and recovery time to the results table.
 - [ ] Write a resume bullet using only the measurements you actually obtained.

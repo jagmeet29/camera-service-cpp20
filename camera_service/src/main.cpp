@@ -12,6 +12,7 @@
 #include <mutex>
 #include <string>
 #include <string_view>
+#include <atomic>
 
 #include <opencv2/highgui.hpp>
 #include <opencv2/imgproc.hpp>
@@ -19,10 +20,12 @@
 
 namespace {
 
-volatile std::sig_atomic_t stop_requested = 0;
+static_assert(std::atomic<bool>::is_always_lock_free, "Signal handler requires a lock-free atomic bool");
+
+std::atomic<bool> stop_requested{false};
 
 void handle_signal(int) {
-    stop_requested = 1;
+    stop_requested.store(true);
 }
 
 }  // namespace
@@ -60,7 +63,7 @@ int main(int argc, char* argv[]) {
         camera_service::processing_loop(queue, metrics, processor_config);
     });
 
-    camera_service::CaptureConfig capture_config{0};
+    camera_service::CaptureConfig capture_config{"http://192.168.1.14:8080/videofeed"};
 
     std::thread capture_thread([&queue, &metrics, capture_config] {
         camera_service::capture_loop(queue, metrics, stop_requested, capture_config);
@@ -74,7 +77,7 @@ int main(int argc, char* argv[]) {
     std::uint64_t previous_processed_frame = 0;
     std::uint64_t previous_captured_frame = 0;
 
-    while (!stop_requested)
+    while (!stop_requested.load())
     {
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
         auto now = std::chrono::steady_clock::now();
