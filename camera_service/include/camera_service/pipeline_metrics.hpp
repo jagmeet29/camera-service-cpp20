@@ -13,6 +13,7 @@ struct PipelineMetrics {
     std::atomic<std::uint64_t> captured_frames{0};
     std::atomic<std::uint64_t> dropped_frames{0};
     std::atomic<std::uint64_t> read_failures{0};
+    std::atomic<std::uint64_t> open_failures{0};
 
     // These values form one interval statistic and must change together.
     std::mutex age_mutex;

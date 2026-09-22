@@ -22,3 +22,23 @@ target_link_libraries(camera_view PRIVATE
     opencv_highgui
     opencv_imgproc
 )
+
+find_package(Threads REQUIRED)
+
+add_executable(queue_test
+    tests/queue_test.cpp
+    src/bounded_frame_queue.cpp
+)
+
+target_include_directories(queue_test PRIVATE include)
+
+target_link_libraries(queue_test PRIVATE
+    opencv_core
+    Threads::Threads
+)
+
+enable_testing()
+
+add_test(NAME queue_behavior COMMAND queue_test)
+
+set_tests_properties(queue_behavior PROPERTIES TIMEOUT 5)

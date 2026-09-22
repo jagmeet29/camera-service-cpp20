@@ -4,31 +4,42 @@ Goal: build a Linux C++ camera component that delivers fresh frames, remains bou
 
 ## Progress estimate
 
-- **Last reviewed:** 2026-09-19, against the current source and reported test output.
-- **Overall completion:** approximately **65%**; **35% remaining**.
-- **Remaining focused implementation and learning time:** approximately **14–24 hours**.
+- **Last reviewed:** 2026-09-22, against the current source and user-reported tests.
+- **Overall completion:** approximately **70%**; **30% remaining**.
+- **Remaining focused implementation and learning time:** approximately **12–22 hours**.
 - **At 4–6 hours per week:** approximately **3–6 weeks**.
 
 This is an effort estimate, not a percentage of checked boxes. The bounded
 pipeline, interval metrics, configurable delay, and initial README are working.
 Basic phone-stream recovery and lock-free atomic shutdown signaling are now
-implemented. Remaining work includes blocking-I/O timeouts, input validation,
+implemented. Open/read timeouts are configured, failure counters are separated,
+and basic queue tests pass according to the reported run. Remaining work includes timeout verification, input validation,
 recovery measurements, failure tests, and reproducible measurements. Driver behavior and
 debugging may change the estimate.
+
+### Remaining timeline (learning time included)
+
+1. Automated test setup, queue edge cases, and input validation: **3–5 hours**.
+2. Failure/shutdown verification, exception handling, and sanitizer runs: **5–9 hours**.
+3. Reproducible performance/memory/recovery results, README, and demo: **4–8 hours**.
+
+These are planning ranges, not deadlines. Optional reconnect counters and capped
+backoff are deferred and are not prerequisites for the first portfolio version.
 
 ## Immediate next task
 
 - [x] Replace the shared stop flag with `std::atomic<bool>` and verify at compile
   time that it is always lock-free; keep the signal handler limited to setting it.
-- [ ] Select FFmpeg explicitly for the phone URL and pass open/read timeouts when
-  opening the stream. Test stream loss, reconnect, and Ctrl-C during stalled I/O;
-  measure actual shutdown time rather than assuming the timeout is a hard bound.
+- [x] Select FFmpeg explicitly for the phone URL and pass 3000 ms open/read timeouts.
+- [ ] Register `queue_test` with CTest and set a test timeout so a regression cannot hang the test runner indefinitely.
+- [ ] Verify Ctrl-C during genuinely stalled network I/O; connection-refused tests do not prove timeout behavior.
 - [ ] Validate delay arguments fully: reject text, trailing characters, negative
   numbers, and out-of-range values with a useful error instead of an uncaught exception.
 
 ## GitHub checkpoints
 
-- [x] **Checkpoint 1 — first-push code milestone:** Reporter restored, producer/consumer overload test demonstrated, and local commit `3af6dc4` exists. Remote points to `jagmeet29/linux-camera-service-cpp20`; remote publication was not checked during this review.
+- [x] **Checkpoint 1 — first-push code milestone:** Reporter restored and producer/consumer overload test demonstrated. Remote corrected to `jagmeet29/camera-service-cpp20`; latest remote publication was not checked during this review.
+- [x] Exclude local `build/` and `build-camera/` directories from Git tracking without deleting local build files.
 - [x] **Checkpoint 2 — shareable progress:** Processing delay is configurable; queue high-water/read-failure metrics and initial overload results are documented in `README.md`.
 - [ ] **Checkpoint 3 — portfolio-ready public repository:** Demonstrate disconnect/reconnect recovery, clean shutdown in all states, sanitizer/GDB verification, architecture diagram, and a short demo video.
 
@@ -87,12 +98,12 @@ GUI display and the `q` exit were removed when capture moved to its own thread.
 - [x] Introduce explicit service states: `Starting`, `Streaming`, `Disconnected`, `Stopping`, `Stopped`.
 - [x] On failed read, release the capture device and transition to `Disconnected`.
 - [x] Retry opening after a fixed one-second delay, checking the stop flag every 50 ms during that delay.
-- [ ] Add capped backoff for repeated failures (currently the retry delay is fixed).
+- [ ] Optional/deferred: add capped backoff for repeated failures (currently the retry delay is fixed).
 - [x] After reopening and receiving a valid frame, return to `Streaming`.
 - [x] Demonstrate phone IP-camera stream loss and recovery without restarting the service.
-- [ ] Count reconnect attempts and successful reconnects.
+- [ ] Optional/deferred: count reconnect attempts and successful reconnects.
 - [ ] Measure and report recovery time for the phone-stream restart test; distinguish failure detection time from recovery after the source becomes available.
-- [ ] Separate open failures from read failures (currently both increment `read_failures`).
+- [x] Separate open failures from read failures and report both counters.
 
 Reported phone test: `Streaming -> Disconnected -> Streaming`, followed by a
 second disconnection and Ctrl-C reaching `Stopping -> Stopped`. This verifies
@@ -107,12 +118,23 @@ No timed recovery measurement has been recorded yet.
 - [x] Join the capture thread before closing the queue.
 - [x] Use atomic loads/stores for the shared stop flag; require lock-free operations for signal-handler use.
 - [ ] Handle worker exceptions without terminating the process with joinable threads.
-- [ ] Measure shutdown time and document camera read/open blocking limitations.
-- [ ] Verify shutdown during capture, during slow processing, and while disconnected.
+- [x] Measure cleanup time from main observing the stop request until both threads are joined.
+- [x] Observe shutdown while streaming with slow processing and while disconnected.
+- [ ] Document and test camera read/open blocking limitations; do not claim a hard shutdown deadline.
 - [x] Observe Ctrl-C shutdown while disconnected in the reported phone test.
+- [x] Add a standalone `queue_test` executable with assertion checks (run with assertions enabled).
+- [x] Test capacity 2 with frames 1, 2, 3: size stays 2 and popped frames are 2 then 3.
+- [x] Test draining a closed queue and returning false when it is closed and empty.
+- [ ] Test invalid capacity and push-after-close behavior; clarify the push return contract.
+- [ ] Test that closing the queue wakes a waiting consumer (not covered by the single-threaded test).
 - [ ] Build and run with AddressSanitizer and UndefinedBehaviorSanitizer.
 - [ ] Check thread synchronization with ThreadSanitizer where supported.
 - [ ] Debug at least one real issue with GDB or sanitizer output; document the cause and fix.
+
+Reported cleanup measurements: **8.88389 ms** while disconnected and **162.616 ms**
+while streaming under artificial processing load. These are individual samples,
+not worst-case bounds or exact Ctrl-C-to-exit times. The last printed queue size
+does not establish queue size at shutdown. Silent-network timeout testing remains pending.
 
 ## Portfolio delivery
 

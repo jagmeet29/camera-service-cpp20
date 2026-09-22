@@ -36,7 +36,7 @@ void capture_loop(
             );
 
             if (!capture.isOpened()) {
-                ++metrics.read_failures;
+                ++metrics.open_failures;
                 if (state != CameraState::Disconnected) {
                     state = CameraState::Disconnected;
                     std::cerr << "camera_state=Disconnected\n";

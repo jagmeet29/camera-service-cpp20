@@ -63,7 +63,7 @@ int main(int argc, char* argv[]) {
         camera_service::processing_loop(queue, metrics, processor_config);
     });
 
-    camera_service::CaptureConfig capture_config{"http://192.168.1.14:8080/videofeed"};
+    camera_service::CaptureConfig capture_config{"http://192.168.1.35:8080/videofeed"};
 
     std::thread capture_thread([&queue, &metrics, capture_config] {
         camera_service::capture_loop(queue, metrics, stop_requested, capture_config);
@@ -122,14 +122,26 @@ int main(int argc, char* argv[]) {
                   << " frame_age_max_ms=" << frame_age_max_ms
                   << " queue_high_water=" << queue_high_water
                   << " read_failures=" << metrics.read_failures.load()
+                  << " open_failures=" << metrics.open_failures.load()
                   << '\n';
 
         interval_started = now;
 
     }
+    const auto shutdown_started = std::chrono::steady_clock::now();
     
     capture_thread.join();
     queue.close(); 
     processor.join();
+
+    
+    const auto shutdown_finished = std::chrono::steady_clock::now();
+
+    const double shutdown_ms =
+        std::chrono::duration<double, std::milli>(
+            shutdown_finished - shutdown_started
+        ).count();
+
+    std::cout << "shutdown_ms=" << shutdown_ms << '\n';
     return 0;
 }
